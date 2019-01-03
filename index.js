@@ -5,10 +5,10 @@ let nested = document.getElementById('nested')
 function nestedTarget() {
   var done = func(nested.getElementByClassName('target'));
   if (done) return done;
-  node = node.firstChild;
-  while (node) {
+  node = nested.firstChild;
+  while (!done) {
     done = nestedTarget();
     if (done) return done;
-    node = node.nextSibling;
+    node = nested.nextSibling;
   }
 }

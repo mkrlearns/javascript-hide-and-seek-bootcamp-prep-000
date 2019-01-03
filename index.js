@@ -3,7 +3,7 @@ function getFirstSelector(selector) {
 }
 let nested = document.getElementById('nested')
 function nestedTarget() {
-  var done = func(nested.getElementByClassName('target'));
+  var done = nested.getElementByClassName('target');
   if (done) return done;
   node = nested.firstChild;
   while (!done) {

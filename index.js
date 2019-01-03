@@ -3,5 +3,7 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget() {
-
+  let lis = document
+    .getElementById(app)
+    .querySelectorAll('div')
 }

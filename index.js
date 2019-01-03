@@ -6,4 +6,7 @@ function nestedTarget() {
   let lis = document
     .getElementById(app)
     .querySelectorAll('div')
+  for (let i = 0; i < lis.lenght; i++) {
+    
+  }
 }

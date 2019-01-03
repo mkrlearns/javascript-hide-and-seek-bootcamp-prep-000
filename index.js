@@ -1,7 +1,8 @@
 function getFirstSelector(selector) {
   return document.querySelectorAll(selector)[0]
 }
-let nested = document.getElementById('nested')
+let nested = document.getElementById('app')
+nested = document.getElementById('nested')
 function nestedTarget() {
   var done = nested.getElementByClassName('target');
   if (done) return done;

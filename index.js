@@ -14,11 +14,11 @@ function increaseRankBy(n) {
 }
 
 function deepestChild( ){
-   var node = document.getElementById("grand-node")
-   var children = node.children[0]
-   while (children) {
-     node = children
-     children = node.children[0]
+   var parent = document.getElementById("grand-node")
+   var child = node.children[0]
+   while (child) {
+     parent = child
+     child = node.children[0]
    }
-   return node
+   return parent
 }

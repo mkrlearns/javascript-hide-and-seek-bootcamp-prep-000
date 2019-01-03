@@ -1,15 +1,17 @@
-function getFirstSelector(selector) {
-  return document.querySelectorAll(selector)[0]
+function getFirstSelector(selector){
+  return document.querySelector(selector)
 }
 
-function nestedTarget() {
-  let lis = document
-    .getElementById(app)
-    .querySelectorAll('div')
-  for (let i = 0; i < lis.lenght; i++) {
-    let contaier = lis[i]
-    while (lis.getElementsByClassName('target') == null) {
-      
-    }
+function nestedTarget(){
+  return document.querySelector('#nested .target')
+}
+
+function increaseRankBy(n) {
+  const ranked_list = document.querySelectorAll('.ranked-list')
+  for (let i = 0; i < ranked_list.length; i++){
+    ranked_list[i].innerHTML = parseInt((i + n))
   }
+}
+function deepestChild(){
+  return document.querySelector('#grand-node div div div div')
 }

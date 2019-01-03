@@ -4,15 +4,11 @@ function getFirstSelector(selector) {
 let nested = document.getElementById('nested')
 function nestedTarget() {
   var done = func(node);
-  if (done) return true;
-  if ('shadowRoot' in node && node.shadowRoot) {
-    done = nestedTarget(node.shadowRoot, func);
-    if (done) return true;
-  }
+  if (done) return node;
   node = node.firstChild;
   while (node) {
     done = nestedTarget();
-    if (done) return true;
+    if (done) return node;
     node = node.nextSibling;
   }
 }

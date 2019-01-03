@@ -3,9 +3,16 @@ function getFirstSelector(selector) {
 }
 let nested = document.getElementById('nested')
 function nestedTarget() {
-    nested = nested.querySelectorAll(*)
-    for (let i = 0; nested.length > i; i++) {
-      nested.getElementByClassName('target')
-    }
+  var done = func(node);
+  if (done) return true;
+  if ('shadowRoot' in node && node.shadowRoot) {
+    done = nestedTarget(node.shadowRoot, func);
+    if (done) return true;
+  }
+  node = node.firstChild;
+  while (node) {
+    done = nestedTarget();
+    if (done) return true;
+    node = node.nextSibling;
   }
 }

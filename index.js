@@ -4,11 +4,11 @@ function getFirstSelector(selector) {
 let nested = document.getElementById('nested')
 function nestedTarget() {
   var done = func(nested.getElementByClassName('target'));
-  if (done) return node;
+  if (done) return done;
   node = node.firstChild;
   while (node) {
     done = nestedTarget();
-    if (done) return node;
+    if (done) return done;
     node = node.nextSibling;
   }
 }
